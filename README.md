@@ -3,7 +3,7 @@ Este é um código Python que solicita que o usuário insira seu CPF, verifica s
 
 O código começa inicializando algumas variáveis, incluindo uma lista vazia chamada "cpf_digitado" para armazenar o CPF digitado pelo usuário, duas variáveis para as somas parciais dos dígitos de verificação e dois multiplicadores (10 e 11) para calcular os dígitos de verificação.
 
-O código utiliza um loop "while True" que solicita que o usuário digite seu CPF sem pontos ou traços e verifica se a entrada é alfanumérica e tem exatamente 11 caracteres. Se a entrada não for válida, o código informa o usuário do erro e solicita que ele tente novamente. Se a entrada for válida, o código adiciona o CPF à lista "cpf_digitado", remove todos os pontos, calcula os dígitos de verificação e compara os dígitos de verificação calculados com os dígitos de verificação no CPF de entrada.
+O código utiliza um loop "while True" que solicita que o usuário digite seu CPF sem pontos ou traços e verifica se a entrada é numérica e tem exatamente 11 caracteres. Se a entrada não for válida, o código informa o usuário do erro e solicita que ele tente novamente. Se a entrada for válida, o código adiciona o CPF à lista "cpf_digitado", calcula os dígitos de verificação e compara os dígitos de verificação calculados com os dígitos de verificação no CPF de entrada.
 
 O primeiro dígito de verificação é calculado somando-se o produto de cada um dos nove primeiros dígitos do CPF pelo seu respectivo multiplicador (começando em 10 e diminuindo para 2). O resultado dessa soma é dividido por 11, e o dígito de verificação é o resto da divisão. Se o resto da divisão for maior ou igual a 10, o dígito de verificação é definido como 0.
 
