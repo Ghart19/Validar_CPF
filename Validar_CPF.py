@@ -11,7 +11,7 @@ while True:
 
     # Verificando se a entrada é numérica e tem exatamente 11 caracteres
     if not cpf.isdigit() or len(cpf) != 11:
-        print('CPF inválido. Por favor, digite apenas números e letras e verifique se seu CPF tem 11 caracteres.')
+        print('CPF inválido. Por favor, digite apenas números e verifique se seu CPF tem 11 caracteres.')
     else:
         # Adicionando entrada do usuário a uma lista
         cpf_digitado.append(cpf)
