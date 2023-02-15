@@ -9,18 +9,16 @@ while True:
     # Solicitando entrada de CPF do usuário e verificando se a entrada é alfanumérica
     cpf = input('Por favor, digite seu CPF sem pontos ou traços: ').strip()
 
-    # Verificando se a entrada é alfanumérica e tem exatamente 11 caracteres
-    if not cpf.isalnum() or len(cpf) != 11:
+    # Verificando se a entrada é numérica e tem exatamente 11 caracteres
+    if not cpf.isdigit() or len(cpf) != 11:
         print('CPF inválido. Por favor, digite apenas números e letras e verifique se seu CPF tem 11 caracteres.')
     else:
-        # Adicionando entrada do usuário a uma lista e removendo todos os pontos
+        # Adicionando entrada do usuário a uma lista
         cpf_digitado.append(cpf)
         for palavra in cpf:
             for letra in palavra:
                 cpf_digitado.append(letra)
         cpf_digitado.pop(0)
-        while '.' in cpf_digitado:
-            cpf_digitado.remove('.')
         
         # Calculando o primeiro dígito de verificação do CPF
         num1 = cpf_digitado[0:9]
@@ -37,8 +35,6 @@ while True:
         # Calculando o segundo dígito de verificação do CPF
         num2 = cpf_digitado[0:10]
         for i, digito in enumerate(num2):
-            if digito == '-':
-                continue
             valor2 = multiplicador2 * int(digito)
             soma_parcial2 += valor2
             if multiplicador2 >= 2:
